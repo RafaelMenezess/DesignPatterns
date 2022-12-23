@@ -2,6 +2,10 @@
 {
     public class ICPP : TemplateImpostoCondicional
     {
+        public ICPP(Imposto outroImposto) : base(outroImposto)
+        {
+        }
+
         public override bool UsarMaximaTaxacao(Orcamento orcamento)
         {
             return orcamento.Valor >= 500;
