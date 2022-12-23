@@ -1,0 +1,19 @@
+﻿namespace DesignPatterns
+{
+    public abstract class TemplateImpostoCondicional : Imposto
+    {
+        public abstract bool UsarMaximaTaxacao(Orcamento orcamento);
+        public abstract double MaximaTaxacao(Orcamento orcamento);
+        public abstract double MinimaTaxacao(Orcamento orcamento);
+
+        public double Calcula(Orcamento orcamento)
+        {
+            if (UsarMaximaTaxacao(orcamento))
+            {
+                return MaximaTaxacao(orcamento);
+
+            }
+            return MinimaTaxacao(orcamento);
+        }
+    }
+}
