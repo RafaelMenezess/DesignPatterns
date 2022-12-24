@@ -31,6 +31,20 @@ namespace DesignPatterns
             //double desconto = calculador.Calcula(orcamento);
             //Console.WriteLine(desconto);
 
+            Orcamento reforma = new Orcamento(500);
+            Console.WriteLine(reforma.Valor);
+            reforma.AplicaDescontoExtra();
+            Console.WriteLine(reforma.Valor);
+
+            reforma.Aprova();
+
+            reforma.AplicaDescontoExtra();
+            Console.WriteLine(reforma.Valor);
+
+            reforma.Finaliza();
+            reforma.AplicaDescontoExtra();
+
+
             Console.ReadKey();
         }
     }
