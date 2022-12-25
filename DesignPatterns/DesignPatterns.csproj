@@ -46,6 +46,9 @@
     <Compile Include="Aprovado.cs" />
     <Compile Include="CalculadorDeDescontos.cs" />
     <Compile Include="CalculadorDeImpostos.cs" />
+    <Compile Include="EnviadorEmail.cs" />
+    <Compile Include="EnviadorSms.cs" />
+    <Compile Include="AcaoAposGerarNota.cs" />
     <Compile Include="NotaFiscalBuilder.cs" />
     <Compile Include="DescontoPorCincoItens.cs" />
     <Compile Include="DescontoPorMaisDeQuinhentosReais.cs" />
@@ -61,6 +64,7 @@
     <Compile Include="Item.cs" />
     <Compile Include="ItemNota.cs" />
     <Compile Include="NotaFiscal.cs" />
+    <Compile Include="NotaFiscalDao.cs" />
     <Compile Include="Orcamento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

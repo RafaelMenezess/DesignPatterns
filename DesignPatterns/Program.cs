@@ -45,18 +45,22 @@ namespace DesignPatterns
             //reforma.AplicaDescontoExtra();
 
             NotaFiscalBuilder criador = new NotaFiscalBuilder();
-            criador
-                .ParaEmpresa("Caelum")
-                .ComCnpj("23.456.789/0001-12")
-                .comItem(new ItemNota("item 1", 100))
-                .comItem(new ItemNota("item 2", 200))
-                .DataAtual()
-                .ComObservacoes("obs obs");
+            //criador
+            //    .ParaEmpresa("Caelum")
+            //    .ComCnpj("23.456.789/0001-12")
+            //    .comItem(new ItemNota("item 1", 100))
+            //    .comItem(new ItemNota("item 2", 200))
+            //    .DataAtual()
+            //    .ComObservacoes("obs obs");
+
+            criador.AdicionaAcao(new EnviadorEmail());
+            criador.AdicionaAcao(new NotaFiscalDao());
+            criador.AdicionaAcao(new EnviadorSms());
 
             NotaFiscal nf = criador.Constroi();
 
-            Console.WriteLine(nf.ValorBruto);
-            Console.WriteLine(nf.Impostos);
+            //Console.WriteLine(nf.ValorBruto);
+            //Console.WriteLine(nf.Impostos);
 
 
             Console.ReadKey();
